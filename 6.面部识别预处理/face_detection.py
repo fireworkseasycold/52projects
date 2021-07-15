@@ -41,4 +41,3 @@ for i in faces_detected:
 cv2.imshow('allface',img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-

@@ -1,0 +1,43 @@
+#建议开始不要有readme，因为提交会报错
+#初始化
+git init
+#添加文件
+git add 要提交的文件名  ,可用.代替所有
+#提交到缓存区
+git commit -m 本次提交的说明
+#撤销commit
+git reset --hard <commit-id>
+
+#远端仓库
+git remote add origin git@github.com:fireworkseasycold/52projects.git
+#推送
+git push -u origin master  #初次需要-u，非空不要
+#注意不要太大，可能断开client_loop: send disconnect: Connection reset by peer
+#可以通过修改配置
+
+#查看分支 -r表示远程 -a所有
+git branch
+
+#创建dev分支，然后切换到dev分支（git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：
+#git branch dev
+#git checkout dev
+git checkout -b dev
+
+#切换远程分支
+git checkout -b dev origin/dev #作用是checkout远程的dev分支，在本地起名为dev分支，并切换到本地的dev分支
+
+重复添加和提交再推送
+git push -u origin dev
+
+#合并分支dev 合r并前要先切回要并入的分支例如maste
+git merge dev
+
+#删除分支
+git branch -d dev
+
+#拉取远程
+git pull origin dev
+
+#查看日志
+git log
+#退出：q

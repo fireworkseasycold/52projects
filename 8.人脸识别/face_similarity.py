@@ -5,20 +5,11 @@
 # @Email : 1476094297@qq.com
 # @File : face_similarity.py
 # @Software: PyCharm
+
 """
 使用face_recognition，计算欧式距离，进行人脸相似度对比
 """
 
-# !/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# @Time : 2021/7/19 14:11
-# @Author : firworkseasycold
-# @Email : 1476094297@qq.com
-# @File : compareface.py
-# @Software: PyCharm
-"""
-比较人脸相似度，进行识别
-"""
 import face_recognition
 import cv2
 

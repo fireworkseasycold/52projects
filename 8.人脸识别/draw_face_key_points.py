@@ -13,7 +13,10 @@
 # @File : easy_face_recognition.py
 # @Software: PyCharm
 
-#人脸关键点检测与绘制
+"""
+人脸关键点检测与绘制
+用到了face_recognition模块
+"""
 
 import face_recognition
 import cv2
@@ -26,6 +29,8 @@ my_image = face_recognition.load_image_file("knownimg/my.jpg")
 
 # Find all the faces in the image找人脸
 my_face_locations = face_recognition.face_locations(my_image)
+my_face_locations_cnn = face_recognition.face_locations(my_image,model='cnn')
+# print(my_face_locations_cnn)#[(153, 679, 398, 435)]
 # print(my_face_locations,len(my_face_locations))#[(142, 706, 409, 438)],top,right,bottom,left
 
 # Or maybe find the facial features in the image识别五官,关键点

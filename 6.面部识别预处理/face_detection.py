@@ -6,7 +6,7 @@
 # @File : face_recognition.py
 # @Software: PyCharm
 """
-使用opencv自带的haar特征分类器进行人脸定位
+使用opencv自带的haar特征分类器
 """
 
 import cv2
@@ -35,14 +35,13 @@ if faces_detected ==():
     print('请确确认图片是否被修改过,例如img[:,:,0]=0,注释掉这几句')
 # print(faces_detected)
 for i in faces_detected:
-    # print(i)
     x,y,w,h=i
     #框出face
     cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),1) #左上，右下
     # 注意numpy中的坐标是和图片坐标相反的，所以切片要先y，后x,切出face用于深度学习
     face = img[y:y + h, x:x + w]
     cv2.imshow('face',face)
-    cv2.waitKey(0) #注释掉就只显示一张切出所有的脸
+    cv2.waitKey(0)
 cv2.imshow('allface',img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()

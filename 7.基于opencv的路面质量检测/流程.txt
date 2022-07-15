@@ -1,0 +1,23 @@
+大致流程
+1.预处理
+对每个帧找到合适的区域（roi），仅仅保留实际包含道路像素的部分，不使用自适应roi
+2.数据扩充
+3.数据增强
+包括增加和减少每帧的亮度，用于帮助学习识别不同照明条件的相同类型和质量的道路
+4.输入训练模型
+这里使用cnn,包含三个卷积和三个全连接层
+
+
+#引用来源数据集：https://www.lapix.ufsc.br/pesquisas/projeto-veiculo-autonomo/datasets/?lang=zh-CN
+@article{rtk:2019，
+作者 = {Thiago Rateke 和 Karla Aparecida Justen 和 Aldo von Wangenheim}，
+标题 = {道路表面分类与从低成本相机捕获的图像 - 道路穿越知识 (RTK) 数据集}，
+期刊 = {杂志理论与应用信息学 (RITA)}，
+年份 = {2019}，
+doi = {https://doi.org/10.22456/2175-2745.91522}，
+}
+使用：8063帧，分为三类
+铺砌（沥青柏油马路）asphalt-4930
+铺砌（混凝土人行道）paved-1179
+未铺砌（土路越野）unpaved-1954
+
